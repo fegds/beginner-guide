@@ -1,0 +1,15 @@
+<div class="grid-1-3" ng-repeat="member in members">
+	<figure class="portrait">
+		<div ng-switch on="member.avatar">
+			<div ng-switch-when="">
+			</div>
+			<div ng-switch-default>
+				<img alt="{{member.name}}" ng-src="img/avatar/{{member.avatar}}" class="avatar">
+			</div>
+		</div>
+		<figcaption class="portrait-desc">
+			<h3>{{member.name.CN}}</h3>
+			<p>{{member.about || '我不写简介了，请大家吃饭吧'}}</p>
+		</figcaption>
+	</figure>
+</div>

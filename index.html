@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="FEBG">
+<head>
+	<meta charset="utf-8">
+	<title>新人指引 - 前端组</title>
+	<link href="style/bootstrap.css" rel="stylesheet"/>
+	<link href="style/app.css" rel="stylesheet"/>
+</head>
+<body ng-controller="MainCtrl">
+
+<nav class="nav-menus">
+	<a ng-repeat="menu in menus" class="nav-menus-item" id="route_{{ menu.ctrl }}" href="#{{ menu.url }}">{{ menu.text }}</a>
+</nav>
+<div ng-view></div>
+
+<script src="js/vendor/angular/angular.min.js"></script>
+<script src="js/CONS.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+
+</body>
+</html>

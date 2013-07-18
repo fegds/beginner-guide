@@ -1,0 +1,50 @@
+[
+	{
+		"name": {
+			"EN": "Sam",
+			"CN": "周木生"
+		},
+		"avatar": "",
+		"about": ""
+	},
+	{
+		"name": {
+			"EN": "Ben Xia",
+			"CN": "卢本霞"
+		},
+		"avatar": "benxia.jpg",
+		"about": ""
+	},
+	{
+		"name": {
+			"EN": "Angus",
+			"CN": "杨欣鑫"
+		},
+		"avatar": "",
+		"about": ""
+	},
+	{
+		"name": {
+			"EN": "Rong Fa",
+			"CN": "黄荣发"
+		},
+		"avatar": "fa.jpg",
+		"about": ""
+	},
+	{
+		"name": {
+			"EN": "Lun Bing",
+			"CN": "莫伦冰"
+		},
+		"avatar": "",
+		"about": ""
+	},
+	{
+		"name": {
+			"EN": "Alex",
+			"CN": "胡育航"
+		},
+		"avatar": "alex.jpg",
+		"about": ""
+	}
+]

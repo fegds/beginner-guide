@@ -1,0 +1,8 @@
+<figure class="project" ng-repeat="project in projects">
+	<img alt="{{ project.name }}" ng-src="img/project/{{ project.thumbnail || 'default.png' }}" class="project-preview">
+	<figcaption class="project-desc">
+		<h3>{{project.name}}</h3>
+		<p>SVN 地址: <strong>{{ project.addr }}</strong></p>
+		<p>{{project.about || '这个项目，嗯，嗯，嗯'}}</p>
+	</figcaption>
+</figure>

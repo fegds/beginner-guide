@@ -1,0 +1,93 @@
+<h3>
+	命名规范
+</h3>
+<p>
+	CSS的命名我们使用“模块说明”的一种命名规则，无论ID还是CLASS都使用小写单词，多个单词间用横杠“-”连接，比如：portal-ui。
+</p>
+<p>
+	这样做是为了能清晰的了解某一模块的用处，而不是使用一些无意义的名字。但是在特定情况内的命名，无需做到“结构路径”全部写上，比如：
+</p>
+<pre>
+&lt;div class=&quot;porta-ui-win&quot;&gt;<br/>	&lt;div class=&quot;portal-ui-win-title&quot;&gt;&lt;/div&gt;<br/>&lt;/div&gt;
+</pre>
+<p>
+上面的这种方式如果在层级比较多的情况下又会变得很冗余，虽然是按照规则来的，但是不推荐这样使用，因为portal-ui-win-title的样式是只适用于portal-ui-win里面，所以我们可以将其改成这样：
+</p>
+<pre>
+&lt;div class=&quot;portal-ui-win&quot;&gt;<br/>	&lt;div class=&quot;win-title&quot;&gt;&lt;/div&gt;<br/>	&lt;div class=&quot;win-main&quot;&gt;&lt;/div&gt;<br/>&lt;/div&gt;<br/>
+</pre>
+<h3>
+	通用的class命名
+</h3>
+<p>
+	大部分时候，我们会使用到通用的名字，比如清除浮动的clear，还有更多的more等等，下面罗列出常用的一些通用命名(持续补充)，请遵循下面的方法。
+</p>
+<p>
+<table class="bs-table">
+    <thead>
+        <tr>
+            <th>作用</th>
+            <th>class</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>清浮动</td>
+            <td>clear</td>
+        </tr>
+        <tr>
+            <td>更多</td>
+            <td>more</td>
+        </tr>
+        <tr>
+            <td>减少</td>
+            <td>less</td>
+        </tr>
+        <tr>
+            <td>醒目</td>
+            <td>error</td>
+        </tr>
+        <tr>
+            <td>左浮动</td>
+            <td>fl</td>
+        </tr>
+        <tr>
+            <td>右浮动</td>
+            <td>fr</td>
+        </tr>
+        <tr>
+            <td>宽度</td>
+            <td>w100, w200</td>
+        </tr>
+    </tbody>
+</table>
+</p>
+<h3>
+	书写格式
+</h3>
+<p>
+	一行写一个样式，一个样式里的多个属性都在同一行内，模块与模块之间用空行隔开。如下：
+</p>
+<p>
+body {font-family: Arial;}
+
+.portal-ui-win {position:absolute;z-index:100;}
+.win-title {font-size:14px;line-height:40px;height:40px;}
+
+/*当然，有些时候注释也是少不了的*/
+.portal-ui-form {overflow: auto;}
+.portal-ui-form label {font-weight: bold;}
+.portal-ui-form input[type=text] {padding: 0 5px;}
+</p>
+
+<h3>
+	其它事项
+</h3>
+<ul>
+	<li>
+		请不要再继续兼容IE6
+	</li>
+	<li>
+		原则上不使用任何的css hack
+	</li>
+</ul>

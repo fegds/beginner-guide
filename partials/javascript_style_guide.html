@@ -1,0 +1,96 @@
+<h3>
+	命名的规范
+</h3>
+<p>
+	所有的命名以英文命名，避免使用过长的单词。如使用简写请在不造成其它混淆的情况下使用。
+</p>
+<h3>
+	变量的命名
+</h3>
+<p>
+	全局变量全部使用大写字母来表示，单词间用下划线“_”来分隔，比如：RUN_STEP 
+</p>
+<p>
+	普通变量的命名采用驼峰方式并加上小写字母前缀，按照类型分为：
+</p>
+<p>
+<table class="bs-table">
+    <thead>
+        <tr>
+            <th>类型</th>
+            <th>前缀</th>
+            <th>示例</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="item in varNaming">
+			<td>{{ item[0] }}</td>
+			<td>{{ item[1] }}</td>
+			<td>{{ item[2] }}</td>
+        </tr>
+</table>
+</p>
+<p>
+	原型/JSON里的成员命名同样也采用驼峰式命名，不用加前缀。
+</p>
+<p>
+	作用域不大的一些临时（私有）变量，使用下划线“_”开头，全小写字母，多个单词之间同样用下划线“_”隔开。
+</p>
+<p>
+	循环语句的变量可用简写如：i  j  k  m  n
+</p>
+<h3>
+	函数的命名
+</h3>
+<p>
+	函数的命名遵循前缀法+动词+名词（eg: fGetJson()）的方式，如函数的返回值为逻辑结果则使用is/has等表示逻辑的词语代替动词（eg: isEmpty()）。
+</p>
+<p>
+	如果有内部函数则在以上规则定义前加上两个下划线“_ _”作为开头。
+</p>
+<p>
+	函数之间的参数传递命名与普通变量保持一致，并保证传值为变量时命名与函数定义的命名一致，如下：
+</p>
+<pre>
+	function fGetName(nID){
+		return jProfile[nID].name;
+	}
+	var nID = 12;
+	fGetName(nID);
+</pre>
+<h3>
+	类的命名
+</h3>
+<p>
+	类的命名使用驼峰方式，不用加前缀，类中使用到的方法，属性与内部函数等的命令规则与函数的名字规则一致。
+</p>
+<h3>
+	注释的规范
+</h3>
+<p>
+	函数的注释建议按照JSDOC格式来写，代码片断的注释要写在语句的前一行，或者当前行的后面；
+</p>
+<p>
+	JSDOC的相关信息可查阅以下网站：
+</p>
+<ul>
+	<li><a href="http://usejsdoc.org/">Use JSDoc</a></li>
+	<li><a href="http://code.google.com/p/jsdoc-toolkit/wiki/TagReference">A documentation generator for JavaScript</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/JSDoc">JSDoc - Wikipedia, the free encyclopedia</a></li>
+	<li><a href="http://www.jb51.net/article/26249.htm">JSDoc 介绍使用规范JsDoc的使用介绍</a></li>
+</ul>
+
+<h3>
+	其它注意事项
+</h3>
+<ul>
+	<li>变量的声明写在代码块的前面；</li>
+	<li>函数写在使用之前；</li>
+	<li>花括号“{}”，第一个紧跟着前面的代码，不单独起一行。括号内的代码不与括号在同一行内；</li>
+	<li>不管if后面的语句是单行还是多行，都必须用“{}”括起来；</li>
+	<li>代码行必须以“;”结束</li>
+	<li>正常情况下使用严格相等“===”而不是相等“==”，后者会在运算的时候对数据类型进行转换；</li>
+	<li>不让判断语句过长，可用临时变量存储一些判断条件或者在合适的位置换行</li>
+	<li>尽量不要（杜绝）在HTML页面里写JS代码</li>
+	<li>对于查找的dom对象，一律存储在临时变量中，避免多次查找</li>
+</ul>

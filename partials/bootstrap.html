@@ -1,0 +1,28 @@
+<h3>注册采供账号，用于开发</h3>
+<p>
+	非常推荐大家自己注册1个供应商，1个采购商，自己用
+</p>
+<p>
+	每个人都注册自己的账号，账号越多，容易丰富 DEV 的内容，也容易覆盖更广的面，扩大检测范围
+</p>
+<ol>
+	<li>
+		<p>
+			采购商注册： <a href="{{ register.buyer }}">{{ register.buyer }}</a>
+		</p>
+		<p>
+			采购商，如果你不打算新注册个邮箱用于激活，写个假的，然后去改 <abbr title="Development">DEV</abbr> 开发数据库 common$user 那张表，改3个状态：active_type， status，email_validation，改值为1
+		</p>
+	</li>
+	<li>
+		<p>
+			供应商注册： <a href="{{ register.supplier }}">{{ register.supplier }}</a>
+		</p>
+		<p>
+			供应商是自动激活的
+		</p>
+	</li>
+</ol>
+<p>
+	
+</p>
