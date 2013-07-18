@@ -25,16 +25,16 @@ angular.module('FEBG.controllers', [])
 						id: 'workflow'
 					},
 				   	{
-						text: '准备',
-						id: 'bootstrap'
-					},
-				   	{
 						text: 'HTML/CSS 代码规范',
 						id: 'htmlcssStyleGuide'
 					},
 				   	{
 						text: 'Javascript 代码规范',
 						id: 'javascriptStyleGuide'
+					},
+				   	{
+						text: '准备',
+						id: 'bootstrap'
 					}
 				];
 
@@ -47,11 +47,14 @@ angular.module('FEBG.controllers', [])
             $scope.menus = menus;
 
 			$scope.$on('$routeChangeSuccess', function(e, current, previous) { 
-				if(previous){
-					angular.element(document.getElementById('route_' + previous.$$route.controller)).removeClass('active');
+				var currentCtrl = current.$$route ? current.$$route.controller : CONS.routes.members.id,
+					 prevCtrl = previous && previous.$$route ? previous.$$route.controller : '';
+
+				if(prevCtrl){
+					angular.element(document.getElementById('route_' + prevCtrl)).removeClass('active');
 				}
-				angular.element(document.getElementById('route_' + current.$$route.controller)).addClass('active');
-			});
+				angular.element(document.getElementById('route_' + currentCtrl)).addClass('active');
+		});
         }
     ])
     .controller('MembersCtrl', ['$scope', '$http',
