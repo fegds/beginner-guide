@@ -1,14 +1,6 @@
 [
 	{
 		"name": {
-			"EN": "Sam",
-			"CN": "周木生"
-		},
-		"avatar": "",
-		"about": ""
-	},
-	{
-		"name": {
 			"EN": "Ben Xia",
 			"CN": "卢本霞"
 		},
@@ -20,7 +12,7 @@
 			"EN": "Angus",
 			"CN": "杨欣鑫"
 		},
-		"avatar": "",
+		"avatar": "angus.png",
 		"about": ""
 	},
 	{
@@ -36,15 +28,15 @@
 			"EN": "Lun Bing",
 			"CN": "莫伦冰"
 		},
-		"avatar": "",
+		"avatar": "lunbing.jpg",
 		"about": ""
 	},
 	{
 		"name": {
-			"EN": "Alex",
-			"CN": "胡育航"
+			"EN": "Jian Wei",
+			"CN": "吕健伟"
 		},
-		"avatar": "alex.jpg",
+		"avatar": "jianwei.jpg",
 		"about": ""
 	}
 ]
